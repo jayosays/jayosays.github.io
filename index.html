@@ -1,2 +1,88 @@
-<a href="https://x.com/jayosays">X</a>
-<a href="https://www.youtube.com/@jayosays">YouTube</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Personal website of Your Name — brief one-sentence description.">
+  <meta name="author" content="Your Name">
+  <title>Your Name</title>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: Canvas;
+      --fg: CanvasText;
+      --muted: color-mix(in srgb, CanvasText 65%, Canvas);
+      --accent: color-mix(in srgb, CanvasText 20%, Canvas);
+      --max: 42rem;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+      background: var(--bg);
+      color: var(--fg);
+    }
+    a { color: inherit; }
+    .skip {
+      position: absolute;
+      left: -9999px;
+    }
+    .skip:focus {
+      left: 1rem;
+      top: 1rem;
+      z-index: 10;
+      padding: 0.5rem 0.75rem;
+      background: var(--fg);
+      color: var(--bg);
+    }
+    header, main, footer { padding: 1.5rem 1.25rem; }
+    header, footer { border-color: var(--accent); border-style: solid; border-width: 0; }
+    header { border-bottom-width: 1px; }
+    footer { border-top-width: 1px; color: var(--muted); font-size: 0.9rem; }
+    .wrap { max-width: var(--max); margin-inline: auto; }
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.25rem;
+      list-style: none;
+      margin: 0.75rem 0 0;
+      padding: 0;
+    }
+    h1 { font-size: 1.75rem; letter-spacing: -0.02em; margin: 0; }
+    section + section { margin-top: 2.5rem; }
+    h2 { font-size: 1.15rem; margin: 0 0 0.5rem; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <div class="wrap">
+      <h1>Jay O</h1>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="https://x.com/jayosays">X</a></li>
+          <li><a href="https://www.youtube.com/@jayosays">YouTube</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <div class="wrap">
+      <section id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">Hello World</h2>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">
+      <p>&copy; <time datetime="2026">2026</time> Jay O</p>
+    </div>
+  </footer>
+</body>
+</html>
